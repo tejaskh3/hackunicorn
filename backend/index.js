@@ -2,10 +2,10 @@ const dotenv = require('dotenv');
 dotenv.config();
 const exppress = require('express');
 const app = exppress();
-
+const cors = require('cors')
 const bodyparser = require('body-parser');
 app.use(bodyparser.json());
-
+app.use(cors());
 //importing mongoose connect funciton
 const connectDB = require('./connect/connect');
 

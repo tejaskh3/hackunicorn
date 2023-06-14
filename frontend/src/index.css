@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.register-doc{
+  padding: 10p;
+  margin-top: 5%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 20vw;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid gray;
+
+
+}

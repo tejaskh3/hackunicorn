@@ -1,0 +1,113 @@
+.Landing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.LandingTemp {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -20;
+}
+
+.LandingTemp .BlackBackground {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: all ease-in 500ms;
+}
+
+.LandingTemp .BlueBall {
+  position: absolute;
+  border-radius: 50%;
+  background-color: lightblue;
+  bottom: -200px;
+  left: -150px;
+  width: 30rem;
+  height: 30rem;
+  filter: blur(3px);
+  opacity: 0.9;
+  z-index: -20;
+  transition: all 500ms;
+}
+
+.LandingTemp .RedBall {
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  top: -200px;
+  right: -150px;
+  width: 30rem;
+  height: 30rem;
+  filter: blur(3px);
+  opacity: 0.9;
+  z-index: -20;
+  transition: all 500ms;
+}
+
+.LandingTemp .BlackOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* background-opacity: 0; */
+  /* dark-mode: background-opacity: 0.5; */
+  z-index: -10;
+}
+
+.Landing .TitleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Landing .HeadOne {
+  display: flex;
+  flex-direction: column;
+  /* lg:flex-row; */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #0ac5a8;
+  transition: all 300ms;
+}
+
+.Landing .HeadOne .Title {
+  font-size: 60px;
+  font-size: 85px;
+  font-size: 100px;
+  line-height: 80px;
+}
+
+.Landing .HeadOne .Subtitle {
+  font-weight: lighter;
+  font-size: 40px;
+  /* sm:font-size: 65px;
+  md:font-size: 100px; */
+}
+
+.Landing .HeadTwo {
+  font-size: 22px;
+  /* md:font-size: 40px;
+  font-weight: 600;
+  color: #2c3c5b;
+  dark-mode: color: #d5e3fd;
+  padding-top: 6px;
+  md:padding-top: 0; */
+}
+
+.Landing .HeadThree {
+  position: absolute;
+  bottom: 24px;
+  font-size: 18px;
+  /* md:font-size: 24px;
+  color: #f9524ccb; */
+}
