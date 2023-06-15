@@ -328,8 +328,8 @@ function Landing() {
             IMPROVED SECURITY
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            By storing the records on blockchain we ensure that it cannot be hacked or compromised.
+            This is a major advantage over the traditional servers that can be and have been hacked before.
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -347,8 +347,8 @@ function Landing() {
             PATIENTS HAVE THE CONTROL
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Instead of giving the hospitals and doctors unrestricted control over the patients' medical history and records, we give user/patient the control over who can and cannot access their records.
+
           </Typography>
         </CardContent>
       </CardActionArea>
