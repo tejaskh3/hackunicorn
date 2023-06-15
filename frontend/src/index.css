@@ -19,7 +19,8 @@ form{
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: 20vw;
+  max-width: 70%;
+  border-radius: 2%;
   margin: auto;
   text-align: center;
   justify-content: center;
@@ -31,5 +32,5 @@ form{
 :root{
   /* background: #08ac9c; */
 
-background: black !important;
+background: #2b1b03 !important;
 }

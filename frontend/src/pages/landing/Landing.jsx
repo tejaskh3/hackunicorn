@@ -6,7 +6,7 @@ import { Button, Typography, Box, Stack, Card, Link } from "@mui/material";
 import {BsFillClipboard2PlusFill} from 'react-icons/bs'
 import {TbAmbulance} from 'react-icons/tb'
 import logo from './images/healTracjk.jpeg'
-import doc from './images/Sprints1.jpg'
+import doc from './images/main.png'
 function Landing() {
   return (
     // <div>
@@ -125,7 +125,7 @@ function Landing() {
         // mt:'50px',
         // justifyContent:'right',
         // alignItems:'right',
-        background:'#9fd1dd',
+        backgroundColor: '#333230',
         marginBottom:'50px',
         position:'sticky',
         zIndex:'1',
@@ -134,50 +134,56 @@ function Landing() {
 
       }}>
         <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        spacing={{ xs: 1, sm: 5, md: 80,lg: 100 }}
+        direction={{ xs: 'column', sm: 'row'}}
+        spacing={{ xs: 1, sm: 5, md: 80,lg: 120 }}
         >
 
         <img src={logo} style={{borderRadius:'50%', width:'60px', margin:'3px'}}alt="" />
         <Box
+
+
         >
-        <Button
-          type="submit"
-          variant="outlined"
+          <Button
+          href="#footer"
+          // variant="outlined"
           // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
           style={{
-            // backgroundColor: '#228b22',
+            backgroundColor: '#2b1b03',
+            color:'#eba10e',
             // boxShadow: '3px 3px 3px green',
-            margin: '10px'
+            margin: '10px',
+            transition:'0.8s ease'
           }}
-          href=''
-
           >
-          Home
+            Home
           </Button>
           <Button
-          type="submit"
-          variant="outlined"
+          href="#footer"
+          // variant="outlined"
           // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
           style={{
-            // backgroundColor: '#4169E1',
+            backgroundColor: '#2b1b03',
+            color:'#eba10e',
             // boxShadow: '3px 3px 3px green',
-            margin: '10px'
+            margin: '10px',
+            transition:'0.8s ease'
           }}
           >
             About Us
           </Button>
           <Button
-          type="submit"
-          variant="outlined"
+          href="#footer"
+          // variant="outlined"
           // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
           style={{
-            // backgroundColor: '#228b22',
+            backgroundColor: '#2b1b03',
+            color:'#eba10e',
             // boxShadow: '3px 3px 3px green',
-            margin: '10px'
+            margin: '10px',
+            transition:'0.8s ease'
           }}
           >
-          Contact Us
+            Conatact Us
           </Button>
           </Box>
           </Stack>
@@ -188,6 +194,7 @@ function Landing() {
       sx={{
         justifyContent:'center',
         marginTop:'0px',
+        height:'120vh'
       }}
       >
         <Stack marginTop={'100px'}>
@@ -196,7 +203,7 @@ function Landing() {
           sx={{
             display:'inline-block',
             fontSize:'1.2rem',
-            color:'#228B22',
+            color:'#c7bfaf',
             fontWeight:'bold',
 
           }}
@@ -204,7 +211,7 @@ function Landing() {
           <Typography
           sx={{
             display:'inline-block',
-            color:'#4169E1',
+            color:'#c7bfaf',
             fontWeight:'bold',
           }}
           > Your Data</Typography>
@@ -213,7 +220,7 @@ function Landing() {
         <Box>
         <Typography variant='h3'
           sx={{
-            color:'#228B22',
+            color:'#eba10e',
             display:'inline-block',
             fontWeight:'bold',
 
@@ -222,7 +229,7 @@ function Landing() {
           <Typography variant='h3'
           sx={{
             display:'inline-block',
-            color:'#4169E1',
+            color:'#c7bfaf',
             fontWeight:'bold',
 
           }}
@@ -234,13 +241,18 @@ function Landing() {
 
           <Typography sx={{
             fontSize:'.9rem',
+            color:'#c7bfaf'
           }}>Now manage your health records</Typography>
         </Box>
         <Typography sx={{
             fontSize:'.9rem',
+            color:'#c7bfaf'
+
           }}>A path for your better tomorrow</Typography>
            <Typography sx={{
             fontSize:'.9rem',
+            color:'#c7bfaf'
+
           }}>Your health our priority</Typography>
 
         <Box>
@@ -249,7 +261,7 @@ function Landing() {
           variant="contained"
           // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
           style={{
-            backgroundColor: '#228b22',
+            backgroundColor: '#333230',
             // boxShadow: '3px 3px 3px green',
             margin: '10px'
           }}
@@ -260,7 +272,7 @@ function Landing() {
           variant="contained"
           // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
           style={{
-            backgroundColor: '#4169E1',
+            backgroundColor: '#eba10e',
             // boxShadow: '3px 3px 3px green',
             margin: '10px'
           }}
@@ -269,19 +281,22 @@ function Landing() {
         </Box>
 
       </Stack>
+
       <Box>
         <img src={doc}></img>
       </Box>
     </Stack>
-    <Box sx={{ mt: 'auto', py: 2, backgroundColor: '#9fd1dd' }}>
+    kbaeewf
+    <Box sx={{ mt: 'auto', py: 2, backgroundColor: '#333230' }} id="footer">
       <Typography variant="body2" align="center">
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Link sx={{ p: 1 }} href="/">Home</Link>
-          <Link sx={{ p: 1 }} href="/about-us">About Us</Link>
-          <Link sx={{ p: 1 }} href="/contact-us">Contact Us</Link>
+          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">Home</Typography>
+          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">About Us</Typography>
+          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">Contact</Typography>
+
         </Box>
         <Box sx={{ mt: 2 }}>
-          <Typography variant="body2">Stay Connected:</Typography>
+          <Typography variant="body2" >Stay Connected:We will beautify it soon on our v2</Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Link sx={{ p: 1 }} href="https://www.instagram.com/">Instagram</Link>
             <Link sx={{ p: 1 }} href="https://www.twitter.com/">Twitter</Link>

@@ -66,13 +66,13 @@ function Register({ contract }) {
   return (
     <>
 
-    
+
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 5, md: 30 }}
         sx={{
           display: 'flex',
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       >
         <Box
@@ -81,7 +81,8 @@ function Register({ contract }) {
             paddingTop: '1rem',
             paddingLeft: '2rem',
             paddingRight: '2rem',
-            marginLeft: '3rem'
+            marginLeft: '3rem',
+            color:'white',
           }}
         >
           <Typography
@@ -90,7 +91,9 @@ function Register({ contract }) {
               display: 'flex',
               justifyContent: 'center',
               mb: '20px',
-              mt: '0'
+              mt: '0',
+            color:'white',
+
             }}
           >
             Choose Account Type
@@ -168,7 +171,9 @@ function Register({ contract }) {
           </Typography>
           <Typography
             sx={{
-              marginLeft: '10%'
+              marginLeft: '10%',
+            color:'white',
+
             }}
           >
             Please fill out this below form to get started.
@@ -184,7 +189,9 @@ function Register({ contract }) {
                 // mb:'20px',
                 // justifyContent:'center',
                 // marginLeft:'20%',
-                marginTop: '10px'
+                marginTop: '10px',
+            color:'white',
+
               }}
               id="outlined-basic"
               label="Enter your Name."
@@ -198,6 +205,7 @@ function Register({ contract }) {
                 display: 'block',
                 // marginLeft:'10%',
                 // mb:'20px',
+            color:'white',
                 justifyContent: 'center',
                 marginTop: '10px'
               }}
