@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const RegisterDoctor = () => {
+export const RegisterPatient = () => {
   const [user, setUser] = useState({
     name: '',
     age: '',
-    specialization: '',
-    licenseNumber: '',
+    sex:'',
     email: '',
     address: '',
-    password: ''
+    password: '',
   });
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:8080/api/v1/register/doctor', user)
-      .then(response => {
+      .post('http://localhost:8080/api/v1/register/patient', user)
+      .then((response) => {
         console.log(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
         console.error(error.message);
       });
@@ -36,39 +35,32 @@ export const RegisterDoctor = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '20px',
-        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
+        marginTop:'20px',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
       }}
     >
       <div
         style={{
           width: '600px',
+          padding: 'px',
           borderRadius: '8px',
           backgroundColor: '#fff',
           boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-          backgroundColor: '#f6f2ef'
+        backgroundColor: '#f6f2ef',
+        marginBottom:'10px'
+
         }}
       >
-        <h2
-          style={{
-            textAlign: 'center',
-            marginBottom: '20px',
-            fontSize: '2rem'
-          }}
-        >
-          Register Doctor
-        </h2>
-        <form
-          onSubmit={handleSubmit}
-          style={{ padding: '10px', marginBottom: '40px' }}
-        >
+        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Register Patient</h2>
+
+        <form onSubmit={handleSubmit} style={{padding:'10px' , marginBottom:'30px'}}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             value={user.name}
             onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
+            style={{ marginBottom: '10px', width: '96%', padding: '5px'}}
           />
 
           <label htmlFor="age">Age</label>
@@ -80,20 +72,11 @@ export const RegisterDoctor = () => {
             style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
           />
 
-          <label htmlFor="specialization">Specialization</label>
+          <label htmlFor="sex">Sex</label>
           <input
             type="text"
-            name="specialization"
+            name="sex"
             value={user.specialization}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
-
-          <label htmlFor="licenseNumber">License Number</label>
-          <input
-            type="text"
-            name="licenseNumber"
-            value={user.licenseNumber}
             onChange={handleInputChange}
             style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
           />
@@ -125,22 +108,7 @@ export const RegisterDoctor = () => {
             style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
           />
 
-          <button
-            type="submit"
-            style={{
-              width: '80%',
-              padding: '10px',
-              marginLeft: '30px',
-              backgroundColor: '#eba10e',
-              color: '#fff',
-              borderRadius: '4px'
-            }}
-            // onClick={}
-          >
-            {/* <a href="/profile"> */}
-              Register
-              {/* </a> */}
-          </button>
+          <button type="submit" style={{ width: '80%', padding: '10px', marginLeft:'30px',backgroundColor: '#eba10e', color: '#fff', borderRadius: '4px' }}>Register</button>
         </form>
       </div>
     </div>

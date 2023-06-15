@@ -10,6 +10,7 @@ import Home from "./pages/home/Home.jsx";
 import PagenotFound from "./pages/landing/PagenotFound";
 import Assistance from "./pages/home/components/assistance/Assistance";
 import { RegisterDoctor } from "./components/RegisterDoctor";
+import { Profile } from "./components/Profile";
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState("");
@@ -53,6 +54,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="register" element={<Register contract={contract} />} />
           <Route path="verify" element={<Verify />} />
+          <Route path="profile" element={<Profile/>} />
           <Route
             path="home/*"
             element={
@@ -65,7 +67,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-      <RegisterDoctor></RegisterDoctor>
+      {/* <RegisterDoctor></RegisterDoctor> */}
     </div>
   );
 }

@@ -11,7 +11,8 @@ import {
   FormControlLabel,
   TextField
 } from '@mui/material';
-
+import { RegisterPatient} from '../../components/RegisterPateinet';
+import { RegisterDoctor } from '../../components/RegisterDoctor';
 import main from './images/Sprints1.jpg';
 import doc from './images/doc.jpg';
 import patient from './images/patient.jpg';
@@ -73,16 +74,19 @@ function Register({ contract }) {
         sx={{
           display: 'flex',
           alignItems: 'center',
+          height:'130vh'
         }}
       >
         <Box
           sx={{
             border: '3px solid gray',
-            paddingTop: '1rem',
+            paddingTop: '2rem',
             paddingLeft: '2rem',
             paddingRight: '2rem',
             marginLeft: '3rem',
             color:'white',
+          boxShadow: '10px 2px 4px rgba(0, 0, 0, 0.1)',
+
           }}
         >
           <Typography
@@ -179,82 +183,18 @@ function Register({ contract }) {
             Please fill out this below form to get started.
           </Typography>
 
-          <Box>
-            <TextField
-              fullWidth
-              value={opt === 'P' ? pname : dname}
-              onChange={(e)=>opt === 'P'?setPname(e.target.value):setDname(e.target.value)}
-              sx={{
-                display: 'block',
-                // mb:'20px',
-                // justifyContent:'center',
-                // marginLeft:'20%',
-                marginTop: '10px',
-            color:'white',
 
-              }}
-              id="outlined-basic"
-              label="Enter your Name."
-              variant="outlined"
-            />
-            <TextField
-              fullWidth
-              onChange={(e)=>opt === 'P'?setPage(e.target.value):setDage(e.target.value)}
-              value={opt === 'P' ? page : dage}
-              sx={{
-                display: 'block',
-                // marginLeft:'10%',
-                // mb:'20px',
-            color:'white',
-                justifyContent: 'center',
-                marginTop: '10px'
-              }}
-              id="outlined-basic"
-              label="Enter your age."
-              variant="outlined"
-            />
-            {opt==='D'?<TextField
-              fullWidth
-              // onChange={(e)=>opt === 'P'?setPage(e.target.value):setDage(e.target.value)}
-              value={opt === 'P' ? page : dage}
-              sx={{
-                display: 'block',
-                // marginLeft:'10%',
-                // mb:'20px',
-                justifyContent: 'center',
-                marginTop: '10px'
-              }}
-              id="outlined-basic"
-              label="Doctor Id"
-              variant="outlined"
-            />:''}
-            {pname}
-            {page}
-            <Button
-              type="submit"
-              variant="contained"
-              // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-              style={{
-                backgroundColor: '#4169E1',
-                // boxShadow: '3px 3px 3px green',
-                marginTop: '1rem',
-                marginBottom: '2rem',
-                marginLeft: '37%'
-              }}
-              onChange={()=>opt ==="P"?add_patient():add_doctor()}
-              href="home"
-            >
-              Register
-            </Button>
-          </Box>
         </Box>
-        <img
+        {/* <img
           src={main}
           alt=""
           style={{
             marginTop: '100px'
           }}
-        />
+        /> */}
+        {
+          opt==="D"?<RegisterDoctor></RegisterDoctor>:<RegisterPatient></RegisterPatient>
+        }
       </Stack>
     </>
   );
