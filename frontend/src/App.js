@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Hospital from "./abis/Hospital.json";
 import Landing from "./pages/landing/Landing.jsx";
+import {RegisterDoctor} from './components/RegisterDoctor'
 import Register from "./pages/register/Register.jsx";
 import Verify from "./pages/verify/Verify.jsx";
 import Home from "./pages/home/Home.jsx";
@@ -47,7 +48,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="register" element={<Register contract={contract} />} />
@@ -62,8 +63,9 @@ function App() {
 
           <Route path='*' element={<PagenotFound />}/>
         </Routes>
-        {/* <PagenotFound></PagenotFound> */}
-      </BrowserRouter>
+
+      </BrowserRouter> */}
+      <RegisterDoctor></RegisterDoctor>
     </div>
   );
 }
