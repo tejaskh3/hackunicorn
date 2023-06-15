@@ -2,11 +2,14 @@ import React from "react";
 import CoverImage from "./CoverImage";
 import './Landing.css'
 import Header from "./Header";
-import { Button, Typography, Box, Stack, Card, Link } from "@mui/material";
+import { Button, Typography, Box, Stack, Card, Link, CardActionArea, CardMedia, CardContent } from "@mui/material";
 import {BsFillClipboard2PlusFill} from 'react-icons/bs'
 import {TbAmbulance} from 'react-icons/tb'
 import logo from './images/healTracjk.jpeg'
 import doc from './images/main.png'
+import server from "../landing/images/server.jpg"
+import security from "../landing/images/security.png"
+import patientRecord from "../landing/images/PatientRecord.jpg"
 function Landing() {
   return (
     // <div>
@@ -193,8 +196,9 @@ function Landing() {
       spacing={{ xs: 1, sm: 5, md: 20 }}
       sx={{
         justifyContent:'center',
-        marginTop:'0px',
-        height:'120vh'
+        marginTop: '0px',
+        marginBottom: '10px',
+        // height:'120vh'
       }}
       >
         <Stack marginTop={'100px'}>
@@ -286,8 +290,84 @@ function Landing() {
         <img src={doc}></img>
       </Box>
     </Stack>
-    kbaeewf
-    <Box sx={{ mt: 'auto', py: 2, backgroundColor: '#333230' }} id="footer">
+      <Stack
+        direction="row"
+        gap="150px"
+        justifyContent="center"
+        padding="3rem">
+        
+        <Card sx={{ maxWidth: 345 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={server}
+              alt="server graphic"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                SAVING THE SERVER COST
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                We offer replacement to the existing way of relying on servers for storing medical records by storing the data on blockchain.
+                This significantly reduces the costs of data storage and offers other benefits over a server.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={security}
+          alt="security of server"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            IMPROVED SECURITY
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+        </Card>
+        <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={patientRecord}
+          alt="patient records graphic"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            PATIENTS HAVE THE CONTROL
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+        </Card>
+
+
+
+      {/* <Box>
+          <img src={server}></img>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum repudiandae cumque magnam rem quas quos repellendus. Iste sequi ratione distinctio consequuntur nostrum voluptates at omnis unde pariatur fugit, architecto sed!</p>
+      </Box>
+      <Box>
+      <img src={server}></img>
+      </Box>
+      <Box>
+      <img src={server}></img>
+      </Box> */}
+    </Stack>
+    <Box sx={{ mt: 'auto', py: 2, backgroundColor: "#666" }} id="footer">
       <Typography variant="body2" align="center">
         <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">Home</Typography>
