@@ -38,111 +38,242 @@ export const RegisterDoctor = () => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: '20px',
-        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'
+        alignItems: 'flex-start',
+        minHeight: '100vh',
+        backgroundColor: '#f0f2f5',
+        padding: '40px 20px'
       }}
     >
       <div
         style={{
-          width: '600px',
-          borderRadius: '8px',
-          backgroundColor: '#fff',
-          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-          backgroundColor: '#f6f2ef'
+          width: '100%',
+          maxWidth: '500px',
+          borderRadius: '16px',
+          backgroundColor: '#ffffff',
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.08)',
+          padding: '32px',
         }}
       >
         <h2
           style={{
             textAlign: 'center',
-            marginBottom: '20px',
-            fontSize: '2rem'
+            marginBottom: '24px',
+            fontSize: '1.8rem',
+            color: '#1a365d',
+            fontWeight: '700',
+            letterSpacing: '-0.5px',
+            wordBreak: 'break-word',
+            whiteSpace: 'nowrap'
           }}
         >
-          Register Doctor
+          Doctor Registration
         </h2>
-        <form
-          onSubmit={handleSubmit}
-          style={{ padding: '10px', marginBottom: '40px' }}
-        >
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            value={user.name}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <label htmlFor="name" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+                Full Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={user.name}
+                onChange={handleInputChange}
+                style={{
+                  padding: '8px 12px',
+                  borderRadius: '8px',
+                  border: '1.5px solid #e2e8f0',
+                  fontSize: '0.95rem',
+                  transition: 'all 0.2s',
+                  outline: 'none',
+                  backgroundColor: '#f8fafc',
+                  '&:focus': {
+                    borderColor: '#3182ce',
+                    backgroundColor: '#ffffff',
+                    boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                  }
+                }}
+              />
+            </div>
 
-          <label htmlFor="age">Age</label>
-          <input
-            type="text"
-            name="age"
-            value={user.age}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <label htmlFor="age" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+                Age
+              </label>
+              <input
+                type="number"
+                name="age"
+                value={user.age}
+                onChange={handleInputChange}
+                style={{
+                  padding: '8px 12px',
+                  borderRadius: '8px',
+                  border: '1.5px solid #e2e8f0',
+                  fontSize: '0.95rem',
+                  transition: 'all 0.2s',
+                  outline: 'none',
+                  backgroundColor: '#f8fafc',
+                  '&:focus': {
+                    borderColor: '#3182ce',
+                    backgroundColor: '#ffffff',
+                    boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                  }
+                }}
+              />
+            </div>
+          </div>
 
-          <label htmlFor="specialization">Specialization</label>
-          <input
-            type="text"
-            name="specialization"
-            value={user.specialization}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label htmlFor="specialization" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+              Specialization
+            </label>
+            <input
+              type="text"
+              name="specialization"
+              value={user.specialization}
+              onChange={handleInputChange}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1.5px solid #e2e8f0',
+                fontSize: '0.95rem',
+                transition: 'all 0.2s',
+                outline: 'none',
+                backgroundColor: '#f8fafc',
+                '&:focus': {
+                  borderColor: '#3182ce',
+                  backgroundColor: '#ffffff',
+                  boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                }
+              }}
+            />
+          </div>
 
-          <label htmlFor="licenseNumber">License Number</label>
-          <input
-            type="text"
-            name="licenseNumber"
-            value={user.licenseNumber}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label htmlFor="licenseNumber" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+              License Number
+            </label>
+            <input
+              type="text"
+              name="licenseNumber"
+              value={user.licenseNumber}
+              onChange={handleInputChange}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1.5px solid #e2e8f0',
+                fontSize: '0.95rem',
+                transition: 'all 0.2s',
+                outline: 'none',
+                backgroundColor: '#f8fafc',
+                '&:focus': {
+                  borderColor: '#3182ce',
+                  backgroundColor: '#ffffff',
+                  boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                }
+              }}
+            />
+          </div>
 
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            value={user.email}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label htmlFor="email" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+              Email
+            </label>
+            <input
+              type="text"
+              name="email"
+              value={user.email}
+              onChange={handleInputChange}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1.5px solid #e2e8f0',
+                fontSize: '0.95rem',
+                transition: 'all 0.2s',
+                outline: 'none',
+                backgroundColor: '#f8fafc',
+                '&:focus': {
+                  borderColor: '#3182ce',
+                  backgroundColor: '#ffffff',
+                  boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                }
+              }}
+            />
+          </div>
 
-          <label htmlFor="address">Address</label>
-          <input
-            type="text"
-            name="address"
-            value={user.address}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label htmlFor="address" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+              Address
+            </label>
+            <input
+              type="text"
+              name="address"
+              value={user.address}
+              onChange={handleInputChange}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1.5px solid #e2e8f0',
+                fontSize: '0.95rem',
+                transition: 'all 0.2s',
+                outline: 'none',
+                backgroundColor: '#f8fafc',
+                '&:focus': {
+                  borderColor: '#3182ce',
+                  backgroundColor: '#ffffff',
+                  boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                }
+              }}
+            />
+          </div>
 
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={user.password}
-            onChange={handleInputChange}
-            style={{ marginBottom: '10px', width: '96%', padding: '5px' }}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <label htmlFor="password" style={{ fontSize: '0.875rem', fontWeight: '500', color: '#4a5568' }}>
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              value={user.password}
+              onChange={handleInputChange}
+              style={{
+                padding: '8px 12px',
+                borderRadius: '8px',
+                border: '1.5px solid #e2e8f0',
+                fontSize: '0.95rem',
+                transition: 'all 0.2s',
+                outline: 'none',
+                backgroundColor: '#f8fafc',
+                '&:focus': {
+                  borderColor: '#3182ce',
+                  backgroundColor: '#ffffff',
+                  boxShadow: '0 0 0 3px rgba(49, 130, 206, 0.1)'
+                }
+              }}
+            />
+          </div>
 
           <button
             type="submit"
             style={{
-              width: '80%',
-              padding: '10px',
-              marginLeft: '30px',
-              backgroundColor: '#eba10e',
-              color: '#fff',
-              borderRadius: '4px'
+              width: '100%',
+              padding: '12px',
+              marginTop: '8px',
+              backgroundColor: '#3182ce',
+              color: '#ffffff',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+              '&:hover': {
+                backgroundColor: '#2c5282',
+                transform: 'translateY(-1px)'
+              }
             }}
-            // onClick={}
           >
-            {/* <a href="/profile"> */}
-              Register
-              {/* </a> */}
+            Complete Registration
           </button>
         </form>
       </div>

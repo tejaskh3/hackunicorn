@@ -4,9 +4,10 @@ const connectDB = (url) => {
   if (!url) {
     throw new Error("The connection URL must be provided.");
   }
-  return mongoose.connect(url, {
+  mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+  console.log("Connected to MongoDB");
 }
 module.exports = connectDB;
