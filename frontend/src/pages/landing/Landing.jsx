@@ -137,59 +137,116 @@ function Landing() {
 
       }}>
         <Stack
-        direction={{ xs: 'column', sm: 'row'}}
-        spacing={{ xs: 1, sm: 5, md: 80,lg: 120 }}
+          direction={{ xs: 'column', sm: 'row' }}
+          spacing={{ xs: 2, sm: 4 }}
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ 
+            width: '100%',
+            px: 4
+          }}
         >
-
-        <img src={logo} style={{borderRadius:'50%', width:'60px', margin:'3px'}}alt="" />
-        <Box
-
-
-        >
-          <Button
-          href="#footer"
-          // variant="outlined"
-          // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-          style={{
-            backgroundColor: '#2b1b03',
-            color:'#eba10e',
-            // boxShadow: '3px 3px 3px green',
-            margin: '10px',
-            transition:'0.8s ease'
-          }}
-          >
-            Home
-          </Button>
-          <Button
-          href="#footer"
-          // variant="outlined"
-          // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-          style={{
-            backgroundColor: '#2b1b03',
-            color:'#eba10e',
-            // boxShadow: '3px 3px 3px green',
-            margin: '10px',
-            transition:'0.8s ease'
-          }}
-          >
-            About Us
-          </Button>
-          <Button
-          href="#footer"
-          // variant="outlined"
-          // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-          style={{
-            backgroundColor: '#2b1b03',
-            color:'#eba10e',
-            // boxShadow: '3px 3px 3px green',
-            margin: '10px',
-            transition:'0.8s ease'
-          }}
-          >
-            Conatact Us
-          </Button>
+          <Box sx={{ 
+            display: 'flex', 
+            alignItems: 'center',
+            ml: 2
+          }}>
+            <img 
+              src={logo} 
+              alt="Logo"
+              style={{
+                borderRadius: '50%',
+                width: '65px',
+                height: '65px',
+                objectFit: 'cover',
+                border: '3px solid #eba10e',
+                padding: '2px',
+                backgroundColor: 'rgba(43, 27, 3, 0.9)',
+                boxShadow: '0 0 15px rgba(235, 161, 14, 0.5)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer',
+                '&:hover': {
+                  transform: 'rotate(360deg)',
+                  boxShadow: '0 0 20px rgba(235, 161, 14, 0.8)'
+                }
+              }}
+            />
           </Box>
-          </Stack>
+
+          <Box sx={{ 
+            display: 'flex', 
+            gap: 2,
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            mr: 2
+          }}>
+            <Button
+              href="#footer"
+              sx={{
+                px: 3,
+                py: 1,
+                backgroundColor: 'rgba(43, 27, 3, 0.9)',
+                color: '#eba10e',
+                fontSize: '1rem',
+                fontWeight: 600,
+                borderRadius: '8px',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: '#eba10e',
+                  color: '#2b1b03',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 12px rgba(235, 161, 14, 0.3)'
+                }
+              }}
+            >
+              Home
+            </Button>
+
+            <Button
+              href="#footer"
+              sx={{
+                px: 3,
+                py: 1,
+                backgroundColor: 'rgba(43, 27, 3, 0.9)',
+                color: '#eba10e',
+                fontSize: '1rem',
+                fontWeight: 600,
+                borderRadius: '8px',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: '#eba10e',
+                  color: '#2b1b03',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 12px rgba(235, 161, 14, 0.3)'
+                }
+              }}
+            >
+              About Us
+            </Button>
+
+            <Button
+              href="#footer"
+              sx={{
+                px: 3,
+                py: 1,
+                backgroundColor: 'rgba(43, 27, 3, 0.9)',
+                color: '#eba10e',
+                fontSize: '1rem',
+                fontWeight: 600,
+                borderRadius: '8px',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  backgroundColor: '#eba10e',
+                  color: '#2b1b03',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 12px rgba(235, 161, 14, 0.3)'
+                }
+              }}
+            >
+              Contact Us
+            </Button>
+          </Box>
+        </Stack>
       </Card>
       <Stack
       direction={{ xs: 'column', sm: 'row' }}
@@ -201,90 +258,144 @@ function Landing() {
         // height:'120vh'
       }}
       >
-        <Stack marginTop={'100px'}>
-        <Box >
+        <Stack 
+          marginTop={'100px'}
+          sx={{
+            animation: 'fadeIn 1s ease-in',
+            '@keyframes fadeIn': {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          }}
+        >
+        <Box sx={{ textAlign: 'center' }}>
           <Typography
           sx={{
-            display:'inline-block',
-            fontSize:'1.2rem',
-            color:'#c7bfaf',
-            fontWeight:'bold',
-
+            display: 'inline-block',
+            fontSize: {xs: '1rem', sm: '1.2rem', md: '1.4rem'},
+            color: '#c7bfaf',
+            fontWeight: 700,
+            letterSpacing: '0.5px',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
           }}
           >Your Health, </Typography>
           <Typography
           sx={{
-            display:'inline-block',
-            color:'#c7bfaf',
-            fontWeight:'bold',
+            display: 'inline-block', 
+            color: '#c7bfaf',
+            fontWeight: 700,
+            letterSpacing: '0.5px',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
           }}
           > Your Data</Typography>
-
         </Box>
-        <Box>
-        <Typography variant='h3'
-          sx={{
-            color:'#eba10e',
-            display:'inline-block',
-            fontWeight:'bold',
 
+        <Box sx={{
+          marginY: 2,
+          transition: 'transform 0.3s ease',
+          '&:hover': {
+            transform: 'scale(1.02)'
+          }
+        }}>
+          <Typography variant='h3'
+          sx={{
+            color: '#eba10e',
+            display: 'inline-block',
+            fontWeight: 800,
+            background: 'linear-gradient(45deg, #eba10e, #f1c40f)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
           }}
           >Heal</Typography>
           <Typography variant='h3'
           sx={{
-            display:'inline-block',
-            color:'#c7bfaf',
-            fontWeight:'bold',
-
+            display: 'inline-block',
+            color: '#c7bfaf', 
+            fontWeight: 800,
+            marginLeft: 1
           }}
           >Track</Typography>
         </Box>
 
-        <Box>
-
+        <Box sx={{
+          marginY: 3,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2
+        }}>
+          <Typography sx={{
+            fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'},
+            color: '#c7bfaf',
+            textAlign: 'center',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>Now manage your health records</Typography>
 
           <Typography sx={{
-            fontSize:'.9rem',
-            color:'#c7bfaf'
-          }}>Now manage your health records</Typography>
-        </Box>
-        <Typography sx={{
-            fontSize:'.9rem',
-            color:'#c7bfaf'
-
+            fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'},
+            color: '#c7bfaf',
+            lineHeight: 1.8,
+            opacity: 0.9,
+            textAlign: 'center'
           }}>A path for your better tomorrow</Typography>
-           <Typography sx={{
-            fontSize:'.9rem',
-            color:'#c7bfaf'
 
+          <Typography sx={{
+            fontSize: {xs: '0.8rem', sm: '0.9rem', md: '1rem'},
+            color: '#c7bfaf',
+            lineHeight: 1.8,
+            opacity: 0.9,
+            textAlign: 'center'
           }}>Your health our priority</Typography>
+        </Box>
 
-        <Box>
-        <Button
-          type="submit"
-          variant="contained"
-          // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-          style={{
-            backgroundColor: '#333230',
-            // boxShadow: '3px 3px 3px green',
-            margin: '10px'
-          }}
-          href='home'
+        <Box sx={{
+          // marginTop: 4,
+          display: 'flex',
+          gap: 2,
+          justifyContent: 'center'
+        }}>
+          <Button
+            type="submit"
+            variant="contained"
+            href='home'
+            sx={{
+              backgroundColor: '#333230',
+              padding: '10px 25px',
+              borderRadius: '25px',
+              textTransform: 'none',
+              fontSize: '1rem',
+              fontWeight: 600,
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#444440',
+                transform: 'translateY(-2px)',
+                boxShadow: '0 5px 15px rgba(0,0,0,0.2)'
+              }
+            }}
           >Login</Button>
           <Button
-          type="submit"
-          variant="contained"
-          // sx={{ fontSize: '1.2rem', padding: '.6rem 1.2rem' }}
-          style={{
-            backgroundColor: '#eba10e',
-            // boxShadow: '3px 3px 3px green',
-            margin: '10px'
-          }}
-          href='register'
+            type="submit"
+            variant="contained" 
+            href='register'
+            sx={{
+              backgroundColor: '#eba10e',
+              padding: '10px 25px',
+              borderRadius: '25px',
+              textTransform: 'none',
+              fontSize: '1rem',
+              fontWeight: 600,
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#f1c40f',
+                transform: 'translateY(-2px)',
+                boxShadow: '0 5px 15px rgba(235,161,14,0.3)'
+              }
+            }}
           >Register</Button>
         </Box>
 
-      </Stack>
+        </Stack>
 
       <Box>
         <img src={doc}></img>
@@ -296,91 +407,232 @@ function Landing() {
         justifyContent="center"
         padding="3rem">
         
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ 
+          maxWidth: 345,
+          transition: 'transform 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+          }
+        }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={security}
+              alt="security of server"
+              sx={{
+                transition: 'transform 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.1)'
+                }
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                IMPROVED SECURITY
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                By storing the records on blockchain we ensure that it cannot be hacked or compromised.
+                This is a major advantage over the traditional servers that can be and have been hacked before.
+                Your medical data stays completely secure and private.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+
+        <Card sx={{ 
+          maxWidth: 345,
+          transition: 'transform 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+          }
+        }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image={patientRecord}
+              alt="patient records graphic"
+              sx={{
+                transition: 'transform 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.1)'
+                }
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                PATIENTS HAVE THE CONTROL
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Instead of giving the hospitals and doctors unrestricted control over your medical history and records, we give you complete control over who can access your records.
+                You decide who sees what and when.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+
+        <Card sx={{ 
+          maxWidth: 345,
+          transition: 'transform 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'scale(1.05)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+          }
+        }}>
           <CardActionArea>
             <CardMedia
               component="img"
               height="140"
               image={server}
               alt="server graphic"
+              sx={{
+                transition: 'transform 0.3s ease-in-out',
+                '&:hover': {
+                  transform: 'scale(1.1)'
+                }
+              }}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                SAVING THE SERVER COST
+                COST EFFECTIVE
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                We offer replacement to the existing way of relying on servers for storing medical records by storing the data on blockchain.
-                This significantly reduces the costs of data storage and offers other benefits over a server.
+                Our blockchain-based storage eliminates expensive server costs while providing better security and control.
+                Save money without compromising on quality or features.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={security}
-          alt="security of server"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            IMPROVED SECURITY
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            By storing the records on blockchain we ensure that it cannot be hacked or compromised.
-            This is a major advantage over the traditional servers that can be and have been hacked before.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={patientRecord}
-          alt="patient records graphic"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            PATIENTS HAVE THE CONTROL
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Instead of giving the hospitals and doctors unrestricted control over the patients' medical history and records, we give user/patient the control over who can and cannot access their records.
 
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-        </Card>
-
-
-
-      {/* <Box>
-          <img src={server}></img>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum repudiandae cumque magnam rem quas quos repellendus. Iste sequi ratione distinctio consequuntur nostrum voluptates at omnis unde pariatur fugit, architecto sed!</p>
-      </Box>
-      <Box>
-      <img src={server}></img>
-      </Box>
-      <Box>
-      <img src={server}></img>
-      </Box> */}
     </Stack>
-    <Box sx={{ mt: 'auto', py: 2, backgroundColor: "#666" }} id="footer">
+    <Box 
+      sx={{ 
+        mt: '1px', 
+        backgroundColor: "rgba(51, 50, 48, 0.95)",
+        borderTop: '3px solid #eba10e',
+        boxShadow: '0 -4px 12px rgba(0,0,0,0.1)'
+      }} 
+      id="footer"
+    >
       <Typography variant="body2" align="center">
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">Home</Typography>
-          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">About Us</Typography>
-          <Typography variant='h6' sx={{ p: 1,color:'black' }} href="/">Contact</Typography>
-
+        <Box sx={{ 
+          display: 'flex', 
+          flexWrap: 'wrap', 
+          justifyContent: 'center',
+          gap: 4,
+        }}>
+          <Typography 
+            variant='h6' 
+            sx={{ 
+              p: 1,
+              color: '#eba10e',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                color: '#fff',
+                transform: 'translateY(-2px)'
+              }
+            }} 
+            href="/"
+          >
+            Home
+          </Typography>
+          <Typography 
+            variant='h6' 
+            sx={{ 
+              p: 1,
+              color: '#eba10e',
+              cursor: 'pointer', 
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                color: '#fff',
+                transform: 'translateY(-2px)'
+              }
+            }} 
+            href="/"
+          >
+            About Us
+          </Typography>
+          <Typography 
+            variant='h6' 
+            sx={{ 
+              p: 1,
+              color: '#eba10e',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease', 
+              '&:hover': {
+                color: '#fff',
+                transform: 'translateY(-2px)'
+              }
+            }} 
+            href="/"
+          >
+            Contact
+          </Typography>
         </Box>
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="body2" >Stay Connected:We will beautify it soon on our v2</Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Link sx={{ p: 1 }} href="https://www.instagram.com/">Instagram</Link>
-            <Link sx={{ p: 1 }} href="https://www.twitter.com/">Twitter</Link>
-            <Link sx={{ p: 1 }} href="https://www.facebook.com/">Facebook</Link>
+
+        <Box>
+          <Typography 
+            variant="h6" 
+            sx={{
+              color: '#fff',
+              mb: 2,
+              fontWeight: 300
+            }}
+          >
+            All Rights Reserved © HealTrack
+          </Typography>
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'center',
+            gap: 3,
+            pb:1
+          }}>
+            <Link 
+              sx={{ 
+                color: '#eba10e',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  color: '#fff',
+                  transform: 'translateY(-2px)'
+                }
+              }} 
+              href="https://www.instagram.com/"
+            >
+              Instagram
+            </Link>
+            <Link 
+              sx={{ 
+                color: '#eba10e',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  color: '#fff',
+                  transform: 'translateY(-2px)'
+                }
+              }} 
+              href="https://www.twitter.com/"
+            >
+              Twitter
+            </Link>
+            <Link 
+              sx={{ 
+                color: '#eba10e',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  color: '#fff',
+                  transform: 'translateY(-2px)'
+                }
+              }} 
+              href="https://www.facebook.com/"
+            >
+              Facebook
+            </Link>
           </Box>
         </Box>
       </Typography>
