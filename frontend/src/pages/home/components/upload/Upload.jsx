@@ -227,7 +227,7 @@ const StyledBox = styled(Box)({
 });
 
 
-function Upload({ contract }) {
+function Upload() {
   const PatientAddress = useRef(null);
   const DoctorNameRef = useRef(null);
   const symptomRef = useRef(null);
@@ -236,36 +236,51 @@ function Upload({ contract }) {
   const medicationRef = useRef(null);
   const detailRef = useRef(null);
 
-  const addRecord = async (e) => {
-    e.preventDefault();
+  // const addRecord = async (e) => {
+  //   e.preventDefault();
 
-    console.log(
-      PatientAddress.current.value,
-      DoctorNameRef.current.value,
-      symptomRef.current.value,
-      diagnosisRef.current.value,
-      treatmentRef.current.value,
-      medicationRef.current.value,
-      detailRef.current.value,
-      "pdfHash",
-      "pdfHash"
-    );
+  //   console.log(
+  //     PatientAddress.current.value,
+  //     DoctorNameRef.current.value,
+  //     symptomRef.current.value,
+  //     diagnosisRef.current.value,
+  //     treatmentRef.current.value,
+  //     medicationRef.current.value,
+  //     detailRef.current.value,
+  //     "pdfHash",
+  //     "pdfHash"
+  //   );
 
-    const addingRecord = await contract.add_record(
-      PatientAddress.current.value,
-      DoctorNameRef.current.value,
-      symptomRef.current.value,
-      diagnosisRef.current.value,
-      treatmentRef.current.value,
-      medicationRef.current.value,
-      detailRef.current.value,
-      "pdfHash",
-      "pdfHash"
-    );
+  //   const addingRecord = await contract.add_record(
+  //     PatientAddress.current.value,
+  //     DoctorNameRef.current.value,
+  //     symptomRef.current.value,
+  //     diagnosisRef.current.value,
+  //     treatmentRef.current.value,
+  //     medicationRef.current.value,
+  //     detailRef.current.value,
+  //     "pdfHash",
+  //     "pdfHash"
+  //   );
 
-    console.log(addingRecord);
-  };
+  //   console.log(addingRecord);
+  // };
+   const addRecord = async (e) => {
+     e.preventDefault();
 
+     const formData = {
+       patientAddress: PatientAddress.current.value,
+       doctorName: DoctorNameRef.current.value,
+       symptoms: symptomRef.current.value,
+       diagnosis: diagnosisRef.current.value,
+       treatment: treatmentRef.current.value,
+       medication: medicationRef.current.value,
+       details: detailRef.current.value,
+     };
+
+     console.log("Form Data:", formData);
+     // Add your form submission logic here
+   };
   return (
 
 <Box sx={{
