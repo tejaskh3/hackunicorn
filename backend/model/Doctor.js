@@ -30,7 +30,7 @@ const DoctorSchema = new mongoose.Schema({
   address:{
     type:String,
     required:[true,"Please enter your wallet address"]
-  }
+  },
 });
 
 module.exports = mongoose.model('Doctor', DoctorSchema);

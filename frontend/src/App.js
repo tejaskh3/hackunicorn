@@ -10,62 +10,64 @@ import Home from "./pages/home/Home.jsx";
 import PagenotFound from "./pages/landing/PagenotFound";
 import Assistance from "./pages/home/components/assistance/Assistance";
 import { RegisterDoctor } from "./components/RegisterDoctor";
-import { Profile } from "./components/Profile";
+import { PatientProfile } from "./components/PatientProfile";
+import { DoctorProfile } from "./components/DoctorProfile";
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState("");
   const [provider, setProvider] = useState("");
-  useEffect(() => {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+  // useEffect(() => {
+  //   const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-    const loadProvider = async () => {
-      if (provider) {
-        window.ethereum.on("chainChanged", () => {
-          window.location.reload();
-        });
+  //   const loadProvider = async () => {
+  //     if (provider) {
+  //       window.ethereum.on("chainChanged", () => {
+  //         window.location.reload();
+  //       });
 
-        window.ethereum.on("accountsChanged", () => {
-          window.location.reload();
-        });
-        await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        const address = await signer.getAddress();
-        setAccount(address);
-        let contractAddress = "0x25913211d30F5cF3a73eBFE719D724c75f04794a";
+  //       window.ethereum.on("accountsChanged", () => {
+  //         window.location.reload();
+  //       });
+  //       await provider.send("eth_requestAccounts", []);
+  //       const signer = provider.getSigner();
+  //       const address = await signer.getAddress();
+  //       setAccount(address);
+  //       let contractAddress = "0x25913211d30F5cF3a73eBFE719D724c75f04794a";
 
-        const contract = new ethers.Contract(
-          contractAddress,
-          Hospital.abi,
-          signer
-        );
+  //       const contract = new ethers.Contract(
+  //         contractAddress,
+  //         Hospital.abi,
+  //         signer
+  //       );
 
-        setContract(contract);
-        setProvider(provider);
-      } else {
-        console.error("Metamask is not installed");
-      }
-    };
-    provider && loadProvider();
-  }, []);
+  //       setContract(contract);
+  //       setProvider(provider);
+  //     } else {
+  //       console.error("Metamask is not installed");
+  //     }
+  //   };
+  //   provider && loadProvider();
+  // }, []);
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="register" element={<Register contract={contract} />} />
+          <Route path="register" element={<Register />} />
           <Route path="verify" element={<Verify />} />
-          <Route path="profile" element={<Profile/>} />
-          <Route
+          <Route path="patient/:id" element={<PatientProfile />} />
+          <Route path="doctor/:id" element={<DoctorProfile />} />
+          {/* <Route
             path="home/*"
             element={
               <Home account={account} provider={provider} contract={contract} />
             }
-          />
+          /> */}
+          <Route path="home/*" element={<Home />} />
           <Route path="assistance" element={<Assistance />} />
 
-          <Route path='*' element={<PagenotFound />}/>
+          <Route path="*" element={<PagenotFound />} />
         </Routes>
-
       </BrowserRouter>
       {/* <RegisterDoctor></RegisterDoctor> */}
     </div>

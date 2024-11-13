@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterDoctor = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: '',
     age: '',
@@ -23,6 +25,7 @@ export const RegisterDoctor = () => {
       .post('http://localhost:8080/api/v1/register/doctor', user)
       .then(response => {
         console.log(response.data);
+        navigate(`/doctor/${response.data.Doctor._id}`);
       })
       .catch(error => {
         console.error(error);

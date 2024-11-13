@@ -6,28 +6,48 @@ import MainContainer from "./components/mainContainer/MainContainer.jsx";
 import RecordInfo from "./components/recordInfo/RecordInfo.jsx";
 import Upload from "./components/upload/Upload.jsx";
 import Assistance from "./components/assistance/Assistance.jsx";
-
-function Home({ account, provider, contract }) {
+import { PatientProfile } from "../../components/PatientProfile.js";
+function Home() {
   return (
+    // <div>
+    //   <TopNav contract={contract} account={account} />
+    //   <Routes>
+    //     <Route
+    //       path="/*"
+    //       element={
+    //         <>
+    //           <Nav2 contract={contract} account={account} />
+    //           <MainContainer contract={contract} account={account} />
+    //         </>
+    //       }
+    //     />
+    //     <Route path="/record-info" element={<RecordInfo />} />
+    //     <Route path="/upload" element={<Upload contract={contract} />} />
+    //     {/* <Route path='/assistance' element={<Assistance/>}/> */}
+    //   </Routes>
+
+    //   {/* <Assistance></Assistance> */}
+
+    // </div>
     <div>
-      <TopNav contract={contract} account={account} />
+      {/* <TopNav account={account} /> */}
+      <PatientProfile />
       <Routes>
         <Route
           path="/*"
           element={
             <>
-              <Nav2 contract={contract} account={account} />
-              <MainContainer contract={contract} account={account} />
+              <Nav2/>
+              <MainContainer />
             </>
           }
         />
         <Route path="/record-info" element={<RecordInfo />} />
-        <Route path="/upload" element={<Upload contract={contract} />} />
+        <Route path="/upload" element={<Upload />} />
         {/* <Route path='/assistance' element={<Assistance/>}/> */}
       </Routes>
 
       {/* <Assistance></Assistance> */}
-
     </div>
   );
 }
